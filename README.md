@@ -68,5 +68,10 @@ const MyApp = () => {
 };
 ```
 
+## Running the example
+1. `cd example`
+2. `yarn`
+3. `react-native run-android`
+
 # License
 `react-native-autostarter` is MIT licensed, as found in the [LICENSE](https://github.com/karlmarxlopez/react-native-autostarter/blob/master/LICENSE) file.
