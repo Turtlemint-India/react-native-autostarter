@@ -67,5 +67,5 @@ repositories {
 dependencies {
     //noinspection GradleDynamicVersion
     implementation 'com.facebook.react:react-native:+'  // From node_modules
-    implementation 'com.github.judemanutd:autostarter:1.1.0'
+    implementation 'com.github.judemanutd:autostarter:1.0.8'
 }
