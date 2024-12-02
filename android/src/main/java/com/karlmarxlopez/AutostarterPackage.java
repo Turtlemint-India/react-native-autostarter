@@ -9,23 +9,16 @@ import com.facebook.react.bridge.NativeModule;
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.uimanager.ViewManager;
 
-
-import javax.annotation.Nonnull;
-
 public class AutostarterPackage implements ReactPackage {
-    @Nonnull
     @Override
-    public List<ViewManager> createViewManagers(@Nonnull ReactApplicationContext reactContext) {
+    public List<ViewManager> createViewManagers(ReactApplicationContext reactContext) {
         return Collections.emptyList();
     }
 
-    @Nonnull
     @Override
-    public List<NativeModule> createNativeModules(@Nonnull ReactApplicationContext reactContext) {
+    public List<NativeModule> createNativeModules(ReactApplicationContext reactContext) {
         List<NativeModule> modules = new ArrayList<>();
-
         modules.add(new AutostarterModule(reactContext));
-
         return modules;
     }
 }
