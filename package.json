@@ -1,7 +1,7 @@
 {
   "name": "react-native-autostarter",
   "title": "React Native AutoStarter",
-  "version": "1.0.7",
+  "version": "1.0.6",
   "description": "A wrapper of AutoStarter android library",
   "types": "index.d.ts",
   "main": "index.js",
@@ -21,11 +21,11 @@
   "licenseFilename": "LICENSE",
   "readmeFilename": "README.md",
   "peerDependencies": {
-    "react": "18.3.1",
-    "react-native": "0.75.3"
+    "react": "18.2.0",
+    "react-native": "0.73.5"
   },
   "devDependencies": {
-    "react": "18.3.1",
-    "react-native": "0.75.3"
+    "react": "18.2.0",
+    "react-native": "0.73.5"
   }
 }
