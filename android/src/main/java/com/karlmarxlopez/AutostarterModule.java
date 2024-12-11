@@ -1,5 +1,6 @@
 package com.karlmarxlopez;
 
+import android.app.Activity;
 import com.facebook.react.bridge.Promise;
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
@@ -25,11 +26,18 @@ public class AutostarterModule extends ReactContextBaseJavaModule {
 
     @ReactMethod
     public void getAutoStartPermission(Promise promise) {
-        promise.resolve(AutoStartPermissionHelper.getInstance().getAutoStartPermission(getCurrentActivity()));
+        Activity currentActivity = getCurrentActivity();
+        promise.resolve(AutoStartPermissionHelper.getInstance().getAutoStartPermission(currentActivity));
     }
 
     @ReactMethod
     public void isAutoStartPermissionAvailable(Promise promise) {
-        promise.resolve((AutoStartPermissionHelper.getInstance().isAutoStartPermissionAvailable(getCurrentActivity())));
+        Activity currentActivity = getCurrentActivity();
+        if (currentActivity == null) {
+            promise.resolve(false);
+            return;
+        } else {
+            promise.resolve(AutoStartPermissionHelper.getInstance().isAutoStartPermissionAvailable(currentActivity));
+        }
     }
 }
